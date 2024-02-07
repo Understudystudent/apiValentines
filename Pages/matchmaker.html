@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines Day</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Valentine's Day</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutUs.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./matchmaker.html">Love</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Valentine's Day</h1>
+        <h2>Find your Love</h2>
+        <p>Welcome to our Valentine's Matchmaking platform! Discover the magic of love as you explore our features and
+            find your perfect match. Whether you're looking for companionship, friendship, or something more, let love
+            lead the way.</p>
+        <p>Join us in celebrating the joy of connection and the beauty of relationships. Our platform is designed to
+            bring hearts together, making this Valentine's Day a special one for everyone.</p>
+    </div>
+
+    <div class="container mt-3 row">
+        <script>
+            let jsonData = {
+                "Class": [{
+                        "name": "Thimna",
+                        "surname": "Alam",
+                        "profile": "https://i.postimg.cc/Pq6Fc3BM/IMG-1409.jpg"
+                    },
+                    {
+                        "name": "Veronique",
+                        "surname": "Nappie",
+                        "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRhrwtVJTXa6CLIs7ukjQhAGg5tF6tfUPuRQg9pbpUJh8DPD3cXflSxk_Yx3AwJJ-pYEAd8RQWnA4d-X2QoTslI49B_ow=w1920-h868"
+                    },
+                    {
+                        "name": "Tamlin",
+                        "surname": "Geyer",
+                        "profile": "https://i.postimg.cc/VkTyGFPK/20240110-121622.jpg"
+                    },
+                    {
+                        "name": "Sivuyisiwe",
+                        "surname": "Peter",
+                        "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRRMrYjLNGHbACtzeidTaT3Vcjv4o9jx45JJU-72p3ERGZip8TBKI2X4Xol6GAbVM879gb3ij4M5mVSbvML-P0avM5Y6Q=w1920-h868"
+                    },
+                    {
+                        "name": "Aakeefah",
+                        "surname": "Jones",
+                        "profile": "https://i.postimg.cc/NjLqkzSy/20231101-195430.jpg"
+                    },
+                    {
+                        "name": "Pinda",
+                        "surname": "Fortuin",
+                        "profile": "https://i.postimg.cc/J46S0Q0R/res.jpg"
+                    },
+                    {
+                        "name": "Nathalie",
+                        "surname": "Willemse",
+                        "profile": "https://ibb.co/ggnL3cn"
+                    },
+                    {
+                        "name": "Aneeqa",
+                        "surname": "Louw",
+                        "profile": "https://ibb.co/jbJVWgh"
+                    },
+                    {
+                        "name": "Seth",
+                        "surname": "Tobias",
+                        "profile": "https://ibb.co/xD1DwHv"
+                    }
+                ]
+            }
+
+            function displayJsonData() {
+                let container = document.querySelector('.container.row'); // Assuming you want to display content inside the container
+
+                // Loop through each entry in the 'Class' array
+                jsonData.Class.forEach(function (person) {
+                    // Create HTML elements
+                    let cardDiv = document.createElement('div');
+                    cardDiv.className = 'card mt-3 col-md-6'; // Added 'col-md-6' to make each card take half of the width on medium-sized screens
+
+                    let imgElement = document.createElement('img');
+                    imgElement.src = person.profile;
+                    imgElement.className = 'card-img-top';
+
+                    let cardBodyDiv = document.createElement('div');
+                    cardBodyDiv.className = 'card-body';
+
+                    let nameElement = document.createElement('h5');
+                    nameElement.className = 'card-title';
+                    nameElement.textContent = person.name + ' ' + person.surname;
+
+                    // Append elements to the card body
+                    cardBodyDiv.appendChild(nameElement);
+
+                    // Append elements to the card
+                    cardDiv.appendChild(imgElement);
+                    cardDiv.appendChild(cardBodyDiv);
+
+                    // Append the card to the container
+                    container.appendChild(cardDiv);
+                });
+            }
+            // Call the function when the page is loaded
+            window.onload = displayJsonData;
+        </script>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Valentine's Matchmaking. All rights reserved. Built by Rezaar & Carl</p>
+    </footer>
+
+    <!-- Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8Y+tcMLL2w7ZIc/cE3
