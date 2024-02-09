@@ -187,33 +187,32 @@ width: 100%;
 <script>
     let imgCount = 0
 // const cloudUrl = 'https://understudystudent.github.io/vDay2/data/'
-const classData = {
-  "Class": [
-    { "name": "Thimna", "surname": "Alam", "profile": "https://i.postimg.cc/Pq6Fc3BM/IMG-1409.jpg" },
-    { "name": "Veronique", "surname": "Nappie", "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRhrwtVJTXa6CLIs7ukjQhAGg5tF6tfUPuRQg9pbpUJh8DPD3cXflSxk_Yx3AwJJ-pYEAd8RQWnA4d-X2QoTslI49B_ow=w1920-h868" },
-    { "name": "Tamlin", "surname": "Geyer", "profile": "https://i.postimg.cc/VkTyGFPK/20240110-121622.jpg" },
-    { "name": "Sivuyisiwe", "surname": "Peter", "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRRMrYjLNGHbACtzeidTaT3Vcjv4o9jx45JJU-72p3ERGZip8TBKI2X4Xol6GAbVM879gb3ij4M5mVSbvML-P0avM5Y6Q=w1920-h868" },
-    { "name": "Aakeefah", "surname": "Jones", "profile": "https://i.postimg.cc/NjLqkzSy/20231101-195430.jpg" },
-    { "name": "Pinda", "surname": "Fortuin", "profile": "https://i.postimg.cc/J46S0Q0R/res.jpg" },
-    { "name": "Nathalie", "surname": "Willemse", "profile": "https://i.ibb.co/cTmS1sm/20231009-104507.jpg" },
-    { "name": "Aneeqa", "surname": "Louw", "profile": "https://i.ibb.co/ckYbCDJ/20231009-110004.jpg" },
-    { "name": "Seth", "surname": "Tobias", "profile": "https://i.ibb.co/pxfxNyD/20231009-134144.jpg" },
-    { "name": "Jason", "surname": "September", "profile": "https://i.ibb.co/QcCRrtg/20231009-142223.jpg" },
-    { "name": "Tauha", "surname": "Shaik", "profile": "https://i.ibb.co/cYmzVcm/20231009-142322.jpg" },
-    { "name": "Khwezilomso", "surname": "Mbobo", "profile": "https://i.ibb.co/x2jGSF4/20231009-142422.jpg" },
-    { "name": "Sisipho", "surname": "mafrika", "profile": "https://i.ibb.co/VD4cyhj/20231009-104639.jpg" },
-    { "name": "Natasha", "surname": "Kapeyi", "profile": "https://i.ibb.co/wpbmv58/20231009-105651.jpg" },
-    { "name": "Ghamazah", "surname": "Samuels", "profile": "https://i.ibb.co/wSTZMp8/20231009-110155.jpg" },
-    { "name": "Tashreeq", "surname": "Lee", "profile": "https://i.ibb.co/T0jPN58/20231009-110338.jpg" },
-    { "name": "Muttaqueen", "surname": "Salamat", "profile": "https://i.ibb.co/0M9RTQ1/20231009-111117.jpg" },
-    { "name": "Zukisa", "surname": "Shaik", "profile": "https://i.ibb.co/CMV0b3N/20231009-110714.jpg" },
-    { "name": "Jodi", "surname": "Shaik", "profile": "https://i.ibb.co/zNFtqtz/20231009-111212.jpg" },
+// const classData = {
+//   "Class": [
+//     { "name": "Thimna", "surname": "Alam", "profile": "https://i.postimg.cc/Pq6Fc3BM/IMG-1409.jpg" },
+//     { "name": "Veronique", "surname": "Nappie", "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRhrwtVJTXa6CLIs7ukjQhAGg5tF6tfUPuRQg9pbpUJh8DPD3cXflSxk_Yx3AwJJ-pYEAd8RQWnA4d-X2QoTslI49B_ow=w1920-h868" },
+//     { "name": "Tamlin", "surname": "Geyer", "profile": "https://i.postimg.cc/VkTyGFPK/20240110-121622.jpg" },
+//     { "name": "Sivuyisiwe", "surname": "Peter", "profile": "https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYRRMrYjLNGHbACtzeidTaT3Vcjv4o9jx45JJU-72p3ERGZip8TBKI2X4Xol6GAbVM879gb3ij4M5mVSbvML-P0avM5Y6Q=w1920-h868" },
+//     { "name": "Aakeefah", "surname": "Jones", "profile": "https://i.postimg.cc/NjLqkzSy/20231101-195430.jpg" },
+//     { "name": "Pinda", "surname": "Fortuin", "profile": "https://i.postimg.cc/J46S0Q0R/res.jpg" },
+//     { "name": "Nathalie", "surname": "Willemse", "profile": "https://i.ibb.co/cTmS1sm/20231009-104507.jpg" },
+//     { "name": "Aneeqa", "surname": "Louw", "profile": "https://i.ibb.co/ckYbCDJ/20231009-110004.jpg" },
+//     { "name": "Seth", "surname": "Tobias", "profile": "https://i.ibb.co/pxfxNyD/20231009-134144.jpg" },
+//     { "name": "Jason", "surname": "September", "profile": "https://i.ibb.co/QcCRrtg/20231009-142223.jpg" },
+//     { "name": "Tauha", "surname": "Shaik", "profile": "https://i.ibb.co/cYmzVcm/20231009-142322.jpg" },
+//     { "name": "Khwezilomso", "surname": "Mbobo", "profile": "https://i.ibb.co/x2jGSF4/20231009-142422.jpg" },
+//     { "name": "Sisipho", "surname": "mafrika", "profile": "https://i.ibb.co/VD4cyhj/20231009-104639.jpg" },
+//     { "name": "Natasha", "surname": "Kapeyi", "profile": "https://i.ibb.co/wpbmv58/20231009-105651.jpg" },
+//     { "name": "Ghamazah", "surname": "Samuels", "profile": "https://i.ibb.co/wSTZMp8/20231009-110155.jpg" },
+//     { "name": "Tashreeq", "surname": "Lee", "profile": "https://i.ibb.co/T0jPN58/20231009-110338.jpg" },
+//     { "name": "Muttaqueen", "surname": "Salamat", "profile": "https://i.ibb.co/0M9RTQ1/20231009-111117.jpg" },
+//     { "name": "Zukisa", "surname": "Shaik", "profile": "https://i.ibb.co/CMV0b3N/20231009-110714.jpg" },
+//     { "name": "Jodi", "surname": "Shaik", "profile": "https://i.ibb.co/zNFtqtz/20231009-111212.jpg" },
 
 
-  ]
-};
+//   ]
+// };
 
-// Replace the existing 'data' array with the new merged data
 const data = classData.Class.map(item => ({ img: item.profile, name: item.name, price: '', distance: '' }));
 
 const frame = document.body.querySelector('.frame')
